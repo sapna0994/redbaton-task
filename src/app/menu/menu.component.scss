@@ -1,0 +1,253 @@
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 9px !important;
+}
+::ng-deep .mat-form-field-infix {
+    border-top: .3em solid transparent;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+    transform: none !important;
+}
+.sidenav-container {
+  height: 100%;
+}
+.pointer{
+  cursor: pointer;
+}
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+a {
+  color: inherit;
+}
+
+.top-row-ml mat-icon {
+  color: lightgreen;
+}
+.font13 {
+  font-size: 13px;
+}
+.font15 {
+  font-size: 15px;
+}
+.login-button {
+  margin-left: 9px;
+  color: #fff;
+  background-color: #dc3545;
+}
+::ng-deep .mat-dialog-title {
+  margin: 0px 0px 4px !important;
+}
+
+.headerSelect {
+  background: #3c96d7;
+  color: white;
+  border-radius: 18px;
+  border: none;
+  padding: 0 0 0 27px;
+  font-size: 14px;
+  width: 100%;
+}
+.searchBox {
+  width: 277px;
+  padding: 0 0 0 18px;
+}
+.headerSelect::placeholder {
+  color: #e9e9e9;
+  opacity: 1;
+  font-size: 13px;
+}
+.headerSelect:-ms-input-placeholder {
+  color: #e9e9e9;
+  font-size: 13px;
+}
+.headerSelect::-ms-input-placeholder {
+  color: #e9e9e9;
+  font-size: 13px;
+}
+.profileAvatar {
+  height: 33px !important;
+  width: 33px !important;
+}
+.profileUnOrdered {
+  list-style-type: none;
+  padding: 3px 9px !important;
+  margin-bottom: 0 !important;
+  li {
+    font-size: 13px;
+    padding-bottom: 3px;
+    color: #666666;
+    cursor: pointer;
+    border-bottom: 1px solid #f5f5f5;
+  }
+}
+// .location-marker {
+//   position: absolute;
+//   font-size: 13px;
+//   margin: -6.5px 0 0 9px;
+// }
+.search-marker {
+  position: absolute;
+  font-size: 13px;
+  margin: -6.5px 0 0 -30px;
+}
+
+.menu-item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 27px;
+  color: #333;
+}
+
+.hiddenPopup {
+  display: none;
+}
+.firstToolbar{
+  background-color: #fff;
+}
+.secondToolbar{
+  background-color: #fff;
+  color:#333;
+}
+.loginButton{
+  width:120px;
+}
+.listHeader{
+  height: 35px;
+  line-height: 20px;
+  color:#666666;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid #f2f2f2;
+}
+.drName{
+  margin-left: -2px !important;
+}
+.searchWidth{
+  width: 500px;
+}
+@media (min-width: 768px) {
+  .top-row-ml {
+    margin-left: 90px;
+  }
+  .top-row-mr {
+    margin-right: 90px;
+  }
+  .top-menu-text {
+    padding: 0 18px;
+  }
+  ::ng-deep .mat-dialog-title {
+    font: 500 27px/32px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .loginContent {
+    padding: 0 9px !important;
+  }
+  .smallDevice {
+    display: block;
+  }
+  .mediumDevice {
+    display: block;
+  }
+  .eye-pass, .eye-text {
+    float: right;
+    margin-top: -27px;
+    margin-right: 9px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .top-menu-text {
+    display: none;
+  }
+  ::ng-deep .mat-dialog-title {
+    font: 500 18px/32px Roboto, "Helvetica Neue", sans-serif;
+  }
+  .loginContent {
+    padding: 0 9px;
+  }
+  .smallDevice {
+    display: none;
+  }
+  .top-row-ml {
+    margin-left: 0;
+  }
+  .top-row-mr {
+    margin-right: 0;
+  }
+  .sideMenu{
+    padding: 0px;
+    min-width: 0px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1370px) {
+  .mediumDevice {
+    display: none;
+  }
+  .top-row-ml {
+    margin-left: 0;
+  }
+  .top-row-mr {
+    margin-left: 0;
+  }
+}
+
+.example-card {
+  width: 85%;
+  height:fit-content;
+  position: absolute;
+  left: 7%;
+  // top: 16.2%;
+  top: 101%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 99999;
+  a{
+    color: #333333;
+  }
+  a:hover{
+    color: #000000;
+  }
+
+}
+.lower-row {
+  margin-top: 12px;
+}
+.btn1 {
+  left: 50px;
+  top: 40px;
+  width: 75%;
+  height: 100%;
+  border-radius: 17.5px;
+}
+.btn2 {
+  margin-top:20px;
+}
+.items {
+  font-size: 13px;
+  color: #333333;
+  font-weight: normal;
+  font-style: normal;
+}
+.tab-row {
+  margin-top: 12px;
+}
+.tab-row2 {
+  margin-top: -15px;
+}
+

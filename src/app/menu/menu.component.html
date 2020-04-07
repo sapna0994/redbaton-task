@@ -1,0 +1,40 @@
+<ngx-ui-loader loaderId="dpk" blur="9"></ngx-ui-loader>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z2">
+        <mat-toolbar-row class="secondToolbar">
+          <span class="top-row-ml pointer" routerLink="/"><img src="../../assets/logo.png" alt="Logo" style="height: 45px;"></span>
+          <span class="spacer"></span>
+          <span class="menu-item smallDevice mediumDevice pointer" routerLinkActive="active-link">
+             <form [formGroup]="productForm">
+              <mat-form-field class="searchWidth mt-4" appearance="outline">
+                <mat-label>Products</mat-label>
+                <input type="text" placeholder="Search Product" formControlName="productName" aria-label="Event Name" matInput
+                       [formControl]="productControl" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectProduct($event)">
+                  <mat-option *ngFor="let option of allProductTypes | async" [value]="option.name">
+                    {{option.name}}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </form>
+          </span>
+          <span class="font15 top-menu-text">
+            <i class="far fa-bell" aria-hidden="true"></i>
+          </span>&nbsp;
+          <span class="font15 top-menu-text">
+            <i class="far fa-heart" aria-hidden="true"></i>
+          </span>&nbsp;
+          <span class="font15 top-menu-text">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          </span>&nbsp;
+          <button mat-flat-button class="font12 font500 top-row-mr login-button circularRadius mat-elevation-z3">
+            Login / Signup
+          </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

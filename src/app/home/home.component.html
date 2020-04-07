@@ -1,0 +1,91 @@
+<div class="containerX">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px">
+	    <div fxFlex="25%" class="mt-4">
+	     	<mat-card class="getCard">
+	     		<div class="mb-2 ml-4">
+	     			<form [formGroup]="filterForm">
+			     		<h5 class="filterLine" (click)="filterApply()">Apply Filters
+							<span class="text-muted font14">(Click on Apply Filter)</span>
+			     		</h5>
+			            <div class="mt-2 mb-2">
+			     			<p class="font500">Brand</p>
+			     		 	<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px" *ngFor="let brand of brandList;" >
+			                  <div fxFlex fxFlex.xs="100%" class="mb-2 text-muted">
+			                    <mat-radio-group aria-label="Select an option" formControlName="brands" name="brands">
+								  <mat-radio-button [value]="brand.id">
+								    {{brand.name}}
+								  </mat-radio-button>
+								</mat-radio-group>
+			                  </div>
+			                </div>
+			                  <hr>
+			            </div>
+			            <div class="mt-2 mb-2">
+			     			<p class="font500">Category</p>
+			     		 	<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px" *ngFor="let category of categoryList;">
+			                  <div fxFlex fxFlex.xs="100%" class="mb-2 text-muted">
+			                     <mat-radio-group aria-label="Select an option" formControlName="categories" name="categories">
+								  <mat-radio-button [value]="category.id">
+								    {{category.name}}
+								  </mat-radio-button>
+								</mat-radio-group>
+			                  </div>
+			                </div>
+			                <hr>
+			            </div>
+			            <div class="mt-2 mb-2">
+			     			<p class="font500">Features</p>
+			     		 	<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px" *ngFor="let feature of featureList;">
+			                  <div fxFlex fxFlex.xs="100%" class="mb-2 text-muted">
+			                    <mat-checkbox>{{feature.name}}</mat-checkbox>
+			                  </div>
+			                </div> 
+			            </div>
+		           </form>
+	        	</div>
+	     	</mat-card>
+	    </div>
+	    <div fxFlex="75%" fxFlex.xs="100%" class="mt-4">
+	        <div *ngIf="!noShowDetails; else show">
+	        	<div *ngIf="fetchingData; else showLoader">
+	               <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px">
+	                  <div fxFlex="30%" fxFlex.xs="100%" class="mb-4" *ngFor="let pro of productList;">
+	                    <mat-card class="product-list-card" (click)="productDtails(pro.id)">
+	                      <img mat-card-image src="../../../assets/1.jpg" class="proImage" alt="Product Image">
+	                      <mat-card-content>
+	                        <p class="font500">{{pro.name}}</p>
+	                        <em class="text-muted">{{pro.description | slice:0:110}}...</em>
+	                        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px" class="mt-2">
+	                  			<div fxFlex="90%" fxFlex.xs="100%" class="mb-2">
+	                  				<p class="text-muted font14">By Red Baton</p>
+	                  			</div>
+	                  			<div fxFlex="10%" fxFlex.xs="100%" class="mb-2">
+	                  				 <i class="far fa-heart" aria-hidden="true"></i>
+	                  			</div>
+	                  		</div>
+	                  		<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="27px" fxLayoutGap.xs="0px" class="mt-2">
+	                  			<div fxFlex fxFlex.xs="100%" class="mb-2">
+	                  				<p class="font500 price">&#8377;&nbsp;{{pro.price}}</p>
+	                  				<p class="text-muted"><i class="fa fa-cart-plus"></i>&nbsp;Ships in 1 Day</p>
+	                  				<p class="text-muted mt-2 font16">Make a Set&nbsp;&nbsp;<i class="far fa-caret-square-right price"></i>&nbsp;<i class="far fa-caret-square-up"></i>&nbsp;<i class="far fa-caret-square-left set"></i></p>
+	                  			</div>
+	                  		</div>
+	                      </mat-card-content>
+	                    </mat-card>
+	                  </div>
+	                </div>
+	        	</div>
+	      	</div>
+	        <ng-template #show>
+		        <div class="p-5 text-center">
+		          <h5 class="bold">No Details Found</h5>
+		        </div>
+	      	</ng-template>
+	      	<ng-template #showLoader>
+		        <div class="text-center">
+		          <img src="../../../assets/preloader.gif" alt="">
+		        </div>
+	      	</ng-template>
+    	</div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.font500{
+	font-weight: 500;
+}
+.font16{
+	font-size:16px;
+}
+.font14{
+	font-size:14px;
+}
+.getCard{
+	padding: 20px;
+}
+.product-list-card {
+  cursor: pointer;
+  height: 415px;
+  img {
+    height: 171px;
+    object-fit: cover;
+  }
+  p {margin-bottom: 2px;}
+}
+.filterLine{
+	border-bottom: 3px solid #e5e5e5;
+	line-height: 45px;
+	cursor: pointer;
+}
+.price{
+	color: #008ad2;
+}
+.set{
+	color: #dc3545;
+}
